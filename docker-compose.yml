@@ -1,0 +1,11 @@
+services:
+  spectral-op:
+    build: .
+    container_name: spectral-op
+    env_file: .env
+    restart: unless-stopped
+    network_mode: "bridge"
+    stdin_open: false
+    tty: false
+    mem_limit: 6g
+    cpus: '3.5'
